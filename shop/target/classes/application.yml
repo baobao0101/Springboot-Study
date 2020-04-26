@@ -1,0 +1,25 @@
+#配置服务器端口和应用路径
+server:
+  port: 8888
+  servlet:
+    context-path: /shop
+#自定义变量
+#web:
+#  upload-path: C:\\Users\\xiaobao\\Pictures\\Saved Pictures\\
+#配置数据源
+spring:
+  datasource:
+    driver-class-name: com.p6spy.engine.spy.P6SpyDriver
+    url: jdbc:p6spy:mysql://localhost:3306/mybatis?serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+#MP配置
+mybatis-plus:
+  type-enums-package: com.wxb.entity
+  #配置静态资源
+#  mvc:
+#    static-path-pattern: /image/**
+#  resources:
+#    static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/,file:${web.upload-path}
+
+
